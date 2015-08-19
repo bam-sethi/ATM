@@ -19,9 +19,24 @@ function ATM () {
   $('#withdraw2').on('click', function(event){
     console.log('clicked');
   });
-  //not logging an inputed value yet but recognised
-  var amountOne = $('#amount1').val();
-  var amountTwo = $('#amount2').val();
-  console.log(amountOne);
-  console.log(amountTwo);
+
+
 }
+
+  //variable for input box 1 and 2 needs to be able to get numeric value
+  // //when there is input in amount one put it in the balance 1/2 box
+  $('#amount1').change(function(){
+    var amountOne = parseInt(($(this).val()));
+    $('#balance1').html('$' + amountOne);
+  });
+  $('#amount2').change(function(){
+    var amountTwo = parseInt($(this).val());
+    $('#balance2').html('$' + amountTwo);
+  });
+
+
+
+
+
+
+
