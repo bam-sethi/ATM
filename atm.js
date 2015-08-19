@@ -19,24 +19,53 @@ function ATM () {
   $('#withdraw2').on('click', function(event){
     console.log('clicked');
   });
+  //variable for input box 1 and 2 needs to be able to get numeric value
+  // //when there is input in amount one put it in the balance 1/2 box
+  //there is another way to do this with toggling class addCLass removeClass(try this if time)
+  $('#amount1').change(function(){
+    var amountOne = parseInt(($(this).val()));
+    $('#balance1').html('$' + amountOne);
+    if(amountOne <= 0) {
+    $('#balance1').css('background-color', 'red');
+  } else {
+    $('#balance1').css('background-color', '#E3E3E3');
+  }
+});
+
+
+  $('#amount2').change(function(){
+    var amountTwo = parseInt($(this).val());
+    $('#balance2').html('$' + amountTwo);
+      if(amountOne <= 0) {
+    $('#balance2').css('background-color', 'red');
+  } else {
+    $('#balance2').css('background-color', '#E3E3E3');
+  }
+  });
 
 
 }
 
-  //variable for input box 1 and 2 needs to be able to get numeric value
-  // //when there is input in amount one put it in the balance 1/2 box
-  $('#amount1').change(function(){
-    var amountOne = parseInt(($(this).val()));
-    $('#balance1').html('$' + amountOne);
-  });
-  $('#amount2').change(function(){
-    var amountTwo = parseInt($(this).val());
-    $('#balance2').html('$' + amountTwo);
-  });
+
+/// add Class to balance1 with a background color of red
+
+// if its greater than 0 removeClass red
+
+// if(amount1 <= 0) {
+//     $('.balance').css('background-color', 'red');
+//   } else {
+//     $('.balance').css('background-color', 'green');
+//   }
+// });
 
 
 
+ // $('#balance1').filter(function(){
+ //        return $(this).attr('attribute') >= 0;
+      
+ //      $('#balance1').css('background-color, red')
+ //      });
 
+// amountOne <= 0 ? $('#balance1').css('background-color, red') ||  $('#balance1').css('background-color: #E3E3E3')
 
-
-
+// $(this).css('background-color, red')
