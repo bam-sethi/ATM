@@ -31,12 +31,10 @@ function ATM () {
     $('#balance1').css('background-color', '#E3E3E3');
   }
 });
-
-
   $('#amount2').change(function(){
     var amountTwo = parseInt($(this).val());
     $('#balance2').html('$' + amountTwo);
-      if(amountOne <= 0) {
+      if(amountTwo <= 0) {
     $('#balance2').css('background-color', 'red');
   } else {
     $('#balance2').css('background-color', '#E3E3E3');
@@ -46,26 +44,5 @@ function ATM () {
 
 }
 
+//
 
-/// add Class to balance1 with a background color of red
-
-// if its greater than 0 removeClass red
-
-// if(amount1 <= 0) {
-//     $('.balance').css('background-color', 'red');
-//   } else {
-//     $('.balance').css('background-color', 'green');
-//   }
-// });
-
-
-
- // $('#balance1').filter(function(){
- //        return $(this).attr('attribute') >= 0;
-      
- //      $('#balance1').css('background-color, red')
- //      });
-
-// amountOne <= 0 ? $('#balance1').css('background-color, red') ||  $('#balance1').css('background-color: #E3E3E3')
-
-// $(this).css('background-color, red')
